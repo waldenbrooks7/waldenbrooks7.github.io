@@ -108,6 +108,63 @@ display: grid;
             margin-top: -20px; /* Pulls the trout up to swallow baked-in white space */
             margin-bottom: 20px;
         }
+
+/* --- INFO SECTION (Status & About) --- */
+        .info-section {
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto 50px auto; /* Centers the block and adds space before the trout */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+.status-pill {
+            display: inline-flex;
+            align-items: flex-start; /* Anchors the dot to the top line instead of the middle */
+            gap: 15px;
+            background-color: transparent; 
+            border: 1px solid #3a6b35; 
+            padding: 20px 30px; /* Gives the multi-line text more breathing room */
+            border-radius: 20px; /* Softens the corners for a taller box */
+            font-size: 1.1rem;
+            color: #3a6b35;
+            text-align: left;
+            line-height: 1.6;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #3a6b35;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+            margin-top: 9px; /* Nudges the dot down so it perfectly aligns with the first word */
+            flex-shrink: 0; /* Prevents the dot from being squished if the text gets long */
+        }
+
+        /* --- NEW: Horizontal Divider Lines --- */
+        .section-divider {
+            width: 100%;
+            max-width: 500px; /* Keeps the line tasteful and centered rather than stretching across the whole screen */
+            height: 1px;
+            background-color: #d3d3d3; /* Matches your top header line */
+            margin: 40px auto; 
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+
+        .about-blurb {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #222;
+        }
+
 /* --- MOBILE RESPONSIVE LAYOUT (HOME PAGE) --- */
         @media (max-width: 768px) {
             body {
@@ -180,6 +237,31 @@ display: grid;
         <img src="river-valley.png" alt="River Valley Sketch" class="hero-image">
         
         <blockquote>Even if I knew that tomorrow the world would go to pieces, I would still plant my apple tree</blockquote>
+
+</div>
+
+<div class="section-divider"></div>
+
+</div>
+        <div class="info-section">
+            <div class="status-pill">
+                <div class="status-dot"></div>
+                <div>
+                    <strong>Current Status:</strong> Anxiously waiting for the rivers and streams to unfreeze<br>
+                    <strong>Reading:</strong> The Bushwhacked Piano by Thomas McGuane<br>
+                    <strong>Listening:</strong> Self Titled by Dire Straits
+                </div>
+            
+</div>
+        <div class="section-divider"></div>
+
+           <div/>
+            <div class="about-blurb">
+                Walden Brook is an apartment complex in Stonecrest, Georgia. Walden Brooks is a bad pseudonym for a writer from Minnesota. My government name loosely translates to 'River Poet' which makes me just another victim of nominative determinism. You can find me next to your local creek.
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
         
         <img src="trout.png" alt="Leaping Trout Sketch" class="footer-image">
     </main>
