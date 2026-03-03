@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiller | Collected works from the Suburbs</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=IM+Fell+Double+Pica+SC&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'EB Garamond', serif;
+            background-color: #FBF8F4;
+            color: #000000;
+            margin: 0;
+            padding: 60px 50px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        main {
+            flex: 1;
+            width: 100%;
+        }
+
+        .breadcrumb {
+            color: #3a6b35; 
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .breadcrumb:hover {
+            opacity: 0.7;
+        }
+
+        .content-divider {
+            width: 100%;
+            height: 1px;
+            background-color: #000;
+            margin-bottom: 0px; 
+        }
+
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 1fr minmax(300px, 700px) 1fr; 
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* The framed box for your writing */
+        .writing-container {
+            grid-column: 2;
+            border: 1px solid #000; /* Adds the black box */
+            padding: 60px 50px;     /* Breathing room between the text and the border */
+            margin-top: 40px;       /* Pushes the box down slightly from the top line */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+            min-height: 400px;
+        }
+
+        /* --- STYLES FOR ONGOING ENTRIES --- */
+        .entry-block {
+            margin-bottom: 80px; 
+            width: 100%;
+        }
+
+        /* Removes the huge gap under the last poem so the bottom border fits snugly */
+        .entry-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .entry-title {
+            font-family: 'EB Garamond', serif; 
+            font-size: 1.3rem; 
+            margin: 0 0 15px 0;
+            text-decoration: underline;
+            text-underline-offset: 4px; 
+            font-weight: medium;
+            line-height: 1.2;
+        }
+
+        .entry-body {
+            font-size: 1rem;
+            line-height: 1.8;
+            white-space: pre-wrap; 
+            max-width: 600px;
+        }
+
+        .side-image-container {
+            grid-column: 3;
+            display: flex;
+            justify-content: flex-end; 
+            position: sticky;
+            top: 40px; 
+        }
+
+        .side-image {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            transition: opacity 0.3s ease; 
+            margin-top: -25px; 
+        }
+        
+        .side-image-container a:hover .side-image {
+            opacity: 0.7;
+        }
+
+        .bottom-image-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 60px;
+            padding-top: 40px;
+        }
+
+        .bottom-image {
+            width: 80px;
+            height: auto;
+        }
+/* --- MOBILE RESPONSIVE LAYOUT --- */
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 20px; /* Less white space around the edges on small screens */
+            }
+
+            .layout-grid {
+                display: flex;
+                flex-direction: column; /* Stacks the center box and side image vertically */
+                gap: 40px;
+            }
+
+            .feed-box, .writing-container, .list-box {
+                width: 100%;
+                padding: 30px 20px; /* Shrinks the padding inside the bordered box */
+                margin-top: 20px; 
+                box-sizing: border-box; /* Ensures the border doesn't push off the screen */
+            }
+
+            .side-image-container {
+                position: relative; /* Turns off the 'sticky' scroll effect for mobile */
+                top: 0;
+                justify-content: center; /* Centers the river valley image under your content */
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .side-image {
+                margin-top: 0; /* Removes the negative margin since it's no longer next to the line */
+                max-width: 180px; /* Scales the home button down slightly */
+            }
+
+            .entry-title, .piece-title {
+                font-size: 1.5rem; /* Scales titles down so they don't break onto awkward lines */
+            }
+
+            .entry-body, .piece-body {
+                font-size: 1.1rem; /* Slightly smaller text for easier mobile reading */
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <a href="writing.html" class="breadcrumb">← Back to Writing</a>
+        
+        <div class="content-divider"></div>
+
+        <div class="layout-grid">
+            
+            <div class="writing-container">
+                
+                <div class="entry-block">
+                    <h2 class="entry-title">A Poem Called Dairy Queen</h2>
+                    <div class="entry-body">Sometimes when you go to Dairy Queen
+to blunt a displeasure of the spirit,
+hoping to be entranced by the
+America of it all
+A Crew Member will make your
+Choco Brownie Extreme Blizzard
+with chocolate ice cream
+instead of vanilla
+and fuck it all up</div>
+                </div>
+
+                <div class="entry-block">
+                    <h2 class="entry-title">Kwik Trip Liturgy</h2>
+                    <div class="entry-body">Large black coffee and a breakfast sandwich
+$20 on pump two, oh and a pack of Marlboro reds, please
+It's the same thing every day
+the cashier knows my name
+they smile, and say "See You Next Time"
+when I leave
+They say that to everyone
+        I pretend it's just for me</div>
+                </div>
+
+                <div class="entry-block">
+                    <h2 class="entry-title">Target Parking Lot or, The Longest 8 Seconds</h2>
+                    <div class="entry-body">Beneath the flickering red moon
+Plastic red broncs escape their bucking chutes
+Chased down by pick-up men
+        I think they call them Team Members
+Bottle blonde in the back corner
+Belt buckle undone
+Riding bareback</div>
+                </div>
+
+                <div class="entry-block">
+                    <h2 class="entry-title">Delta Connections dba SkyWest</h2>
+                    <div class="entry-body">a pale new sun eats the dawn
+wheels on tarmac, briefly 
+Embraer E-175 floats on 
+to foreign and exotic lands 
+like
+Dulles International Airport
+</div>
+ </div>
+                <div class="entry-block">
+                    <h2 class="entry-title">A Business Trip</h2>
+                    <div class="entry-body">Drinking armagnac and eating crème brûlée 
+in the Ritz Carlton Tysons Corner
+Charge it to the company card
+I am the king of fools
+</div>
+ 
+    </div>
+                
+            </div>
+
+            <div class="side-image-container">
+                <a href="index.html">
+                    <img src="river-valley.png" alt="Return Home" class="side-image">
+                </a>
+            </div>
+        </div>
+
+        <div class="bottom-image-container">
+            <a href="index.html">
+                <img src="trout.png" alt="Sketch" class="bottom-image">
+            </a>
+        </div>
+    </main>
+</body>
+</html>

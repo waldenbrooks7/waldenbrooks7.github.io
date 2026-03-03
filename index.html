@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiller | Landing Page</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=IM+Fell+Double+Pica+SC&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'EB Garamond', serif;
+            background-color: #FBF8F4;
+            color: #000000;
+            margin: 0;
+            padding: 30px 50px; /* Tightened the outer border slightly */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* The thin horizontal line spanning the top */
+        .top-line {
+            width: 100%;
+            height: 1px;
+            background-color: #d3d3d3; /* Softened to better match your mockup */
+            margin-bottom: 20px;
+        }
+
+        header {
+display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: start;
+            margin-bottom: 0px; 
+            position: relative; /* Added for layering */
+            z-index: 10;        /* Forces the header to sit above the image */
+        }
+
+        .location {
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+
+        nav {
+            display: flex;
+            gap: 100px;
+            padding-top: 2px;
+            justify-content: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #3a6b35; /* Earthy green */
+            font-size: 1.1rem;
+            letter-spacing: 0.5px;
+            transition: opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .logo {
+            width: 120px;
+            margin-top: -15px; /* Nudges the circular logo up so its center aligns better with the nav text */
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-image {
+            max-width: 800px;
+            width: 100%;
+            margin-top: -250px; /* Pulls the image up to swallow any baked-in white space */
+            margin-bottom: -175px; /* Tightened the gap before the quote */
+        }
+
+        blockquote {
+            font-family: 'IM Fell Double Pica SC', serif;
+            font-size: 2rem;
+            max-width: 900px;
+            margin: 0 auto 30px; /* Tightened the gap before the trout */
+            line-height: 1.4;
+            color: #111;
+        }
+
+        /* Creates the larger drop-cap "E" */
+        blockquote::first-letter {
+            font-size: 2.8rem;
+        }
+
+        .footer-image {
+            max-width: 90px;
+            width: 100%;
+            margin-top: -20px; /* Pulls the trout up to swallow baked-in white space */
+            margin-bottom: 20px;
+        }
+/* --- MOBILE RESPONSIVE LAYOUT (HOME PAGE) --- */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px; /* Tighter padding for small screens */
+            }
+
+            /* Un-grids the header and stacks the elements neatly */
+            header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 30px; /* Adds clean spacing between Location, Nav, and Logo */
+                margin-bottom: 40px;
+            }
+
+            .location {
+                text-align: center;
+            }
+
+            /* Prevents the links from pushing off the screen */
+            nav {
+                gap: 30px; /* Shrinks the huge 100px gap down to a mobile-friendly size */
+                flex-wrap: wrap; /* Allows links to drop to a new line if the phone is super narrow */
+            }
+
+            .logo-container {
+                justify-content: center; /* Centers the logo */
+            }
+
+            .logo {
+                margin-top: 0; /* Removes the desktop nudge */
+                width: 100px; /* Shrinks logo slightly */
+            }
+
+            /* The most important fix: resets the aggressive overlap */
+            .hero-image {
+                margin-top: 0px; 
+                margin-bottom: 30px; 
+            }
+
+            /* Scales the giant typography down so it fits */
+            blockquote {
+                font-size: 1.5rem; 
+                padding: 0 15px;
+            }
+
+            blockquote::first-letter {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-line"></div>
+    <header>
+        <div class="location">Heaven or somewhere close,<br>Minnesota</div>
+        
+<nav>
+    <a href="writing.html">Writing</a>
+    <a href="images.html">Images</a>
+    <a href="food.html">Food and Drink</a>
+</nav>
+        
+        <div class="logo-container">
+            <img src="chiller-logo.png" alt="Chiller Logo" class="logo">
+        </div>
+    </header>
+
+    <main>
+        <img src="river-valley.png" alt="River Valley Sketch" class="hero-image">
+        
+        <blockquote>Even if I knew that tomorrow the world would go to pieces, I would still plant my apple tree</blockquote>
+        
+        <img src="trout.png" alt="Leaping Trout Sketch" class="footer-image">
+    </main>
+</body>
+</html>

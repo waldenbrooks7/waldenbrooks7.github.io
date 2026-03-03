@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiller | Purgatory</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=IM+Fell+Double+Pica+SC&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'EB Garamond', serif;
+            background-color: #FBF8F4;
+            color: #000000;
+            margin: 0;
+            padding: 60px 50px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        main {
+            flex: 1;
+            width: 100%;
+        }
+
+        /* Navigation Breadcrumb / Top Title */
+        .breadcrumb {
+            color: #3a6b35; /* Earthy green */
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .breadcrumb:hover {
+            opacity: 0.7;
+        }
+
+        .content-divider {
+            width: 100%;
+            height: 1px;
+            background-color: #000;
+            margin-bottom: 0px; 
+        }
+
+        /* 3-Column Grid to guarantee dead-center alignment */
+        .layout-grid {
+            display: grid;
+            grid-template-columns: 1fr minmax(300px, 700px) 1fr; 
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* Center Column: The Writing */
+        .writing-container {
+            grid-column: 2;
+            padding: 60px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Aligns the text block to the left of the center column */
+        }
+
+        .piece-title {
+            font-family: 'EB Garamond', serif;
+            font-size: 1.5rem;
+            margin: 0 0 10px 0;
+            line-height: 1.2;
+        }
+
+        .piece-author {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 50px;
+            font-style: italic;
+        }
+
+        .piece-body {
+            font-size: 1rem;
+            line-height: 1.8;
+            /* pre-wrap respects your exact line breaks and spaces, perfect for poetry */
+            white-space: pre-wrap; 
+            max-width: 600px;
+        }
+
+        /* Right Column: The side image / Home button */
+        .side-image-container {
+            grid-column: 3;
+            display: flex;
+            justify-content: flex-end; 
+            position: sticky;
+            top: 40px; 
+        }
+
+        .side-image {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            transition: opacity 0.3s ease; 
+            margin-top: -25px; /* Pulls image up to align with the black line */
+        }
+        
+        .side-image-container a:hover .side-image {
+            opacity: 0.7;
+        }
+
+        /* Bottom Center: The secondary image */
+        .bottom-image-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 60px;
+            padding-top: 40px;
+        }
+
+        .bottom-image {
+            width: 80px;
+            height: auto;
+        }
+/* --- MOBILE RESPONSIVE LAYOUT --- */
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 20px; /* Less white space around the edges on small screens */
+            }
+
+            .layout-grid {
+                display: flex;
+                flex-direction: column; /* Stacks the center box and side image vertically */
+                gap: 40px;
+            }
+
+            .feed-box, .writing-container, .list-box {
+                width: 100%;
+                padding: 30px 20px; /* Shrinks the padding inside the bordered box */
+                margin-top: 20px; 
+                box-sizing: border-box; /* Ensures the border doesn't push off the screen */
+            }
+
+            .side-image-container {
+                position: relative; /* Turns off the 'sticky' scroll effect for mobile */
+                top: 0;
+                justify-content: center; /* Centers the river valley image under your content */
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .side-image {
+                margin-top: 0; /* Removes the negative margin since it's no longer next to the line */
+                max-width: 180px; /* Scales the home button down slightly */
+            }
+
+            .entry-title, .piece-title {
+                font-size: 1.5rem; /* Scales titles down so they don't break onto awkward lines */
+            }
+
+            .entry-body, .piece-body {
+                font-size: 1.1rem; /* Slightly smaller text for easier mobile reading */
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <a href="writing.html" class="breadcrumb">← Back to Writing</a>
+        
+        <div class="content-divider"></div>
+
+        <div class="layout-grid">
+            
+            <div class="writing-container">
+                <h1 class="piece-title">Purgatory</h1>
+                
+                <div class="piece-body">Purgatory is a deer stand in November, a folding chair in the top half of a rusted-out fire tower we salvaged from Dad’s Smokejumper days and dragged out to state forest land, a barren waiting room surrounded by forty acres of old-growth red and white pines. In the time of the timber barons, this Lost Forty Acres was mistakenly surveyed as a lake. There was no money to be made in chopping down water. Purgatory is a clerical error. Flannel did little to insulate my bones against a salvaged fire tower and the cold steel of a 30-06 across my lap. Whiskey did little to insulate my mind. I trudged out at dawn and the eager brightness in my eyes faded hours ago. Instant coffee in my thermos had long gone cold. Forty minutes, forty hours, forty days waiting on this lost forty acres. Having not yet killed or shown mercy. Waiting. Grandpa always said that time is the one trap no man or deer can outrun. 
+
+As the coals of daylight faded, He stepped through the radiation fog. Twelve points holding the dying sun. Cold steel on my cheek. I put the crosshairs on his shoulder.
+
+My finger quivered, and I heard him whisper, 
+
+“There’s only one way out of purgatory, son.
+Can you pull the trigger?”
+</div>
+            </div>
+
+            <div class="side-image-container">
+                <a href="index.html">
+                    <img src="river-valley.png" alt="Return Home" class="side-image">
+                </a>
+            </div>
+        </div>
+
+        <div class="bottom-image-container">
+            <a href="index.html">
+                <img src="trout.png" alt="Sketch" class="bottom-image">
+            </a>
+        </div>
+    </main>
+</body>
+</html>
